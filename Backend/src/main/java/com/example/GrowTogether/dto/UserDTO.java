@@ -12,11 +12,15 @@ public class UserDTO {
     private List<String> skillsOffered;
     private List<String> skillsWanted;
 
+    private String email;      // ✅ newly added
+    private String password;   // ✅ newly added
+
     // 🔽 Constructors
     public UserDTO() {}
 
     public UserDTO(String name, String location, String profilePhotoUrl, String availability,
-                   boolean isPublic, List<String> skillsOffered, List<String> skillsWanted) {
+                   boolean isPublic, List<String> skillsOffered, List<String> skillsWanted,
+                   String email, String password) {
         this.name = name;
         this.location = location;
         this.profilePhotoUrl = profilePhotoUrl;
@@ -24,6 +28,8 @@ public class UserDTO {
         this.isPublic = isPublic;
         this.skillsOffered = skillsOffered;
         this.skillsWanted = skillsWanted;
+        this.email = email;
+        this.password = password;
     }
 
     // 🔽 Getters and Setters
@@ -47,4 +53,10 @@ public class UserDTO {
 
     public List<String> getSkillsWanted() { return skillsWanted; }
     public void setSkillsWanted(List<String> skillsWanted) { this.skillsWanted = skillsWanted; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 }

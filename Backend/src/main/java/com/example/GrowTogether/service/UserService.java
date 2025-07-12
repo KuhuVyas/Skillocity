@@ -11,6 +11,8 @@ import java.util.Optional;
 @Service
 public class UserService {
 
+
+
     private final UserRepository userRepository;
 
     // ✅ Manual Constructor Injection
@@ -59,4 +61,14 @@ public class UserService {
         }
         return false;
     }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+
+
 }
